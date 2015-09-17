@@ -19,8 +19,8 @@ Requires:  python-openstackclient
 Requires:  python-requests
 Requires:  python-six
 
-# Conflict due to ironic-discoverd also providing a CLI tool
-Conflicts: python-ironic-discoverd
+Obsoletes: python-ironic-discoverd < 1.1.0-3
+Provides: python-ironic-discoverd = %{upstream_version}
 
 %description
 Ironic Inspector is an auxiliary service for discovering hardware properties
