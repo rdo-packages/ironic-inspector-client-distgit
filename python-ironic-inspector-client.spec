@@ -3,7 +3,7 @@
 
 Name:           %{pypi_name}
 Version:        1.2.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Python client and CLI tool for Ironic Inspector
 # TODO(divius): add Python 3 packaging once oslo.utils and openstackclient are
 # packaged for Python 3 in Fedora.
@@ -36,12 +36,12 @@ This package contains Python client and command line tool for Ironic Inspector.
 Summary:        Python client and CLI tool for Ironic Inspector
 %{?python_provide:%python_provide python2-%{base_name}}
 
-Requires:  python-cliff
-Requires:  python-oslo-i18n
-Requires:  python-oslo-utils
-Requires:  python-openstackclient
-Requires:  python-requests
-Requires:  python-six
+Requires:  python-cliff >= 1.14.0
+Requires:  python-oslo-i18n >= 1.5.0
+Requires:  python-oslo-utils >= 2.0.0
+Requires:  python-openstackclient >= 1.5.0
+Requires:  python-requests >= 2.5.2
+Requires:  python-six >= 1.9.0
 
 # Conflict due to ironic-discoverd also providing a CLI tool
 Conflicts: python-ironic-discoverd
@@ -78,6 +78,9 @@ rm -f {test-,}requirements.txt
 %{python2_sitelib}/python_ironic_inspector_client*egg-info
 
 %changelog
+* Thu Sep 24 2015 Dmitry Tantsur <divius.inside@gmail.com> - 1.2.0-2
+- Use versioned dependencies
+
 * Thu Sep 24 2015 Dmitry Tantsur <divius.inside@gmail.com> - 1.2.0-1
 - New upstream release 1.2.0
 
