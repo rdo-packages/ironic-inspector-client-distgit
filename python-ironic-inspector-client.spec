@@ -3,7 +3,7 @@
 
 Name:           %{pypi_name}
 Version:        1.2.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Python client and CLI tool for Ironic Inspector
 # TODO(divius): add Python 3 packaging once oslo.utils and openstackclient are
 # packaged for Python 3 in Fedora.
@@ -78,6 +78,9 @@ rm -f {test-,}requirements.txt
 %{python2_sitelib}/python_ironic_inspector_client*egg-info
 
 %changelog
+* Thu Feb 04 2016 Fedora Release Engineering <releng@fedoraproject.org> - 1.2.0-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
+
 * Thu Sep 24 2015 Dmitry Tantsur <divius.inside@gmail.com> - 1.2.0-2
 - Use versioned dependencies
 
