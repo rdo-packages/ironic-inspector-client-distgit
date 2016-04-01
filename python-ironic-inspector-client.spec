@@ -1,13 +1,16 @@
 %global pypi_name python-ironic-inspector-client
 
+
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 Name:           python-ironic-inspector-client
-Version:        XXX
-Release:        XXX
+Version:        1.5.0
+Release:        1%{?dist}
 Summary:        Python client and CLI tool for Ironic Inspector
 
 License:        ASL 2.0
 URL:            https://launchpad.net/python-ironic-inspector-client
-Source0:        https://pypi.python.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://pypi.python.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}%{?milestone}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
@@ -51,3 +54,5 @@ rm -f {test-,}requirements.txt
 %{python2_sitelib}/python_ironic_inspector_client*egg-info
 
 %changelog
+* Fri Apr  1 2016 RDO <rdo-list@redhat.com> 1.5.0-1
+- RC1 Rebuild for Mitaka RC1 
