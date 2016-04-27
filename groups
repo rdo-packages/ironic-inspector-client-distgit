@@ -2,4 +2,5 @@
 #
 bb64c3be5780d8ae7888181fa712ef9d8d85ea92	openstack/ironic-inspector-client-distgit-ptl
 cc71fb87cb764d59d6a8e5e5669c8819acb34d87	openstack/ironic-inspector-client-distgit-core
+63673ea7f2ae6a5666566b1ea9f14e473d00f5a9	rdo-core
 global:Registered-Users                 	Registered Users
