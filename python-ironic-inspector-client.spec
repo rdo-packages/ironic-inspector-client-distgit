@@ -13,7 +13,7 @@ BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 BuildRequires:  python-setuptools
 
-Requires:  python-cliff
+Requires:  python-osc-lib
 Requires:  python-oslo-i18n
 Requires:  python-oslo-utils
 Requires:  python-openstackclient
