@@ -1,3 +1,5 @@
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 %global sname python-ironic-inspector-client
 
 Name:           python-ironic-inspector-client
