@@ -4,7 +4,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           python-ironic-inspector-client
-Version:        1.5.0
+Version:        1.6.0
 Release:        1%{?dist}
 Summary:        Python client and CLI tool for Ironic Inspector
 
@@ -54,5 +54,8 @@ rm -f {test-,}requirements.txt
 %{python2_sitelib}/python_ironic_inspector_client*egg-info
 
 %changelog
+* Mon Sep 12 2016 Haikel Guemar <hguemar@fedoraproject.org> 1.6.0-1
+- Update to 1.6.0
+
 * Fri Apr  1 2016 RDO <rdo-list@redhat.com> 1.5.0-1
 - RC1 Rebuild for Mitaka RC1 
