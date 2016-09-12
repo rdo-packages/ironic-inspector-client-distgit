@@ -7,7 +7,7 @@ Summary:        Python client and CLI tool for Ironic Inspector
 
 License:        ASL 2.0
 URL:            https://launchpad.net/python-ironic-inspector-client
-Source0:        https://pypi.python.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://tarballs.openstack.org/%{sname}/%{sname}-%{upstream_version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
@@ -33,9 +33,9 @@ scheduling from a bare metal node, given it’s power management credentials
 This package contains Python client and command line tool for Ironic Inspector.
 
 %prep
-%setup -q -n %{pypi_name}-%{upstream_version}
+%setup -q -n %{sname}-%{upstream_version}
 # Remove bundled egg-info
-rm -rf %{pypi_name}.egg-info
+rm -rf %{sname}.egg-info
 # Let RPM handle the dependencies
 rm -f {test-,}requirements.txt
 
