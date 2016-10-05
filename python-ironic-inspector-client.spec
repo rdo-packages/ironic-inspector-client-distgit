@@ -53,3 +53,4 @@ rm -f {test-,}requirements.txt
 %{python2_sitelib}/python_ironic_inspector_client*egg-info
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/python-ironic-inspector-client/commit/?id=5ad43312e95837a1e2512ca525d4567cb5c8a457
