@@ -14,6 +14,13 @@ BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 BuildRequires:  python-setuptools
+# This all is required to run unit tests in check phase
+BuildRequires:  python-mock
+BuildRequires:  python-osc-lib
+BuildRequires:  python-oslo-i18n
+BuildRequires:  python-oslo-utils
+BuildRequires:  python-requests
+BuildRequires:  python-six
 
 Requires:  python-osc-lib
 Requires:  python-oslo-i18n
@@ -46,6 +53,9 @@ rm -f {test-,}requirements.txt
 
 %install
 %{__python2} setup.py install --skip-build --root %{buildroot}
+
+%check
+%{__python2} -m unittest discover ironic_inspector_client.test
 
 %files
 %doc README.rst LICENSE
