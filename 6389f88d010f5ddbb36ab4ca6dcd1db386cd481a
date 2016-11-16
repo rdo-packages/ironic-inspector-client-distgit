@@ -16,6 +16,24 @@
       "revId": "6389f88d010f5ddbb36ab4ca6dcd1db386cd481a",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adbc538_2e81c58f",
+        "filename": "python-ironic-inspector-client.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2016-11-16T20:52:40Z",
+      "side": 1,
+      "message": "It seems to work, but we\u0027re using only standard python things, and this method is not listed on https://docs.python.org/2.7/library/unittest.html",
+      "parentUuid": "5adbc538_6e602d36",
+      "revId": "6389f88d010f5ddbb36ab4ca6dcd1db386cd481a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
