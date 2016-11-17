@@ -34,6 +34,24 @@
       "revId": "6389f88d010f5ddbb36ab4ca6dcd1db386cd481a",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adbc538_ee0b5d29",
+        "filename": "python-ironic-inspector-client.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2016-11-17T00:17:24Z",
+      "side": 1,
+      "message": "setup.py test is standard setuptools python thing, I guess PBR is taking care of details so it works out-of-the-box for openstack projects",
+      "parentUuid": "5adbc538_2e81c58f",
+      "revId": "6389f88d010f5ddbb36ab4ca6dcd1db386cd481a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
