@@ -3,7 +3,7 @@
 %global pypi_name python-ironic-inspector-client
 
 Name:           python-ironic-inspector-client
-Version:        1.9.0
+Version:        1.10.0
 Release:        1%{?dist}
 Summary:        Python client and CLI tool for Ironic Inspector
 
@@ -64,6 +64,9 @@ rm -f {test-,}requirements.txt
 %{python2_sitelib}/python_ironic_inspector_client*egg-info
 
 %changelog
+* Thu Feb 02 2017 Alfredo Moralejo <amoralej@redhat.com> 1.10.0-1
+- Update to 1.10.0
+
 * Mon Sep 12 2016 Haikel Guemar <hguemar@fedoraproject.org> 1.9.0-1
 - Update to 1.9.0
 
