@@ -23,10 +23,12 @@ BuildRequires:  python-oslo-utils
 BuildRequires:  python-requests
 BuildRequires:  python-six
 
-Requires:  python-osc-lib
-Requires:  python-oslo-i18n
-Requires:  python-oslo-utils
-Requires:  python-openstackclient
+Requires:  python-keystoneauth1 >= 2.18.0
+Requires:  python-osc-lib >= 1.2.0
+Requires:  python-oslo-i18n >= 2.1.0
+Requires:  python-oslo-utils >= 3.18.0
+Requires:  python-openstackclient >= 3.3.0
+Requires:  python-pbr >= 1.8
 Requires:  python-requests
 Requires:  python-six
 
