@@ -28,7 +28,6 @@ Requires:  python-osc-lib >= 1.2.0
 Requires:  python-oslo-i18n >= 2.1.0
 Requires:  python-oslo-utils >= 3.18.0
 Requires:  python-openstackclient >= 3.3.0
-Requires:  python-pbr >= 1.8
 Requires:  python-requests
 Requires:  python-six
 
