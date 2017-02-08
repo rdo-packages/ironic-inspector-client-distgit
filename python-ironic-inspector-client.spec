@@ -9,7 +9,7 @@ Summary:        Python client and CLI tool for Ironic Inspector
 
 License:        ASL 2.0
 URL:            https://launchpad.net/python-ironic-inspector-client
-Source0:        https://pypi.io/packages/source/p/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
+Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
