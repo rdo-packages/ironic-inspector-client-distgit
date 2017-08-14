@@ -3,8 +3,8 @@
 %global pypi_name python-ironic-inspector-client
 
 Name:           python-ironic-inspector-client
-Version:        XXX
-Release:        XXX
+Version:        2.0.0
+Release:        1%{?dist}
 Summary:        Python client and CLI tool for Ironic Inspector
 
 License:        ASL 2.0
@@ -65,3 +65,6 @@ rm -f {test-,}requirements.txt
 %{python2_sitelib}/python_ironic_inspector_client*egg-info
 
 %changelog
+* Mon Aug 14 2017 Alfredo Moralejo <amoralej@redhat.com> 2.0.0-1
+- Update to 2.0.0
+
