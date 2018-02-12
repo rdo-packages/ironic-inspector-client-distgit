@@ -12,24 +12,24 @@ URL:            https://launchpad.net/python-ironic-inspector-client
 Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python2-devel
-BuildRequires:  python-pbr
-BuildRequires:  python-setuptools
+BuildRequires:  python2-pbr
+BuildRequires:  python2-setuptools
 # This all is required to run unit tests in check phase
-BuildRequires:  python-mock
-BuildRequires:  python-osc-lib
-BuildRequires:  python-osc-lib-tests
-BuildRequires:  python-oslo-i18n
-BuildRequires:  python-oslo-utils
-BuildRequires:  python-requests
-BuildRequires:  python-six
+BuildRequires:  python2-mock
+BuildRequires:  python2-osc-lib
+BuildRequires:  python2-osc-lib-tests
+BuildRequires:  python2-oslo-i18n
+BuildRequires:  python2-oslo-utils
+BuildRequires:  python2-requests
+BuildRequires:  python2-six
 
-Requires:  python-pbr >= 2.0.0
-Requires:  python-keystoneauth1 >= 3.1.0
-Requires:  python-osc-lib >= 1.7.0
-Requires:  python-oslo-i18n >= 2.1.0
-Requires:  python-oslo-utils >= 3.20.0
-Requires:  python-requests
-Requires:  python-six
+Requires:  python2-pbr >= 2.0.0
+Requires:  python2-keystoneauth1 >= 3.3.0
+Requires:  python2-osc-lib >= 1.8.0
+Requires:  python2-oslo-i18n >= 3.15.3
+Requires:  python2-oslo-utils >= 3.33.0
+Requires:  python2-requests
+Requires:  python2-six
 
 Obsoletes: python-ironic-discoverd < 1.1.0-3
 Provides: python-ironic-discoverd = %{upstream_version}
