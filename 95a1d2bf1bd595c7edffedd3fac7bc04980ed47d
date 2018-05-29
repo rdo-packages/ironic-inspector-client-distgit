@@ -1,0 +1,9 @@
+Code-Review+2: Javier Peña <jpena@redhat.com>
+Code-Review+2: dtantsur <divius.inside@gmail.com>
+Workflow+1: dtantsur <divius.inside@gmail.com>
+Verified+2: Jenkins CI <admin@rpmfactory.beta.rdoproject.org>
+Submitted-by: Jenkins CI <admin@rpmfactory.beta.rdoproject.org>
+Submitted-at: Tue, 29 May 2018 11:02:23 +0000
+Reviewed-on: https://review.rdoproject.org/r/13926
+Project: openstack/ironic-inspector-client-distgit
+Branch: refs/heads/rpm-master
