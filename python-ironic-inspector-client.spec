@@ -79,7 +79,7 @@ rm -rf %{pypi_name}.egg-info
 rm -f {test-,}requirements.txt
 
 %build
-%{pyver_bin} setup.py build
+%{pyver_build}
 
 %install
 %{pyver_install}
