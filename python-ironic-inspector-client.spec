@@ -3,7 +3,7 @@
 %global pypi_name python-ironic-inspector-client
 
 Name:           python-ironic-inspector-client
-Version:        2.1.0
+Version:        2.1.1
 Release:        1%{?dist}
 Summary:        Python client and CLI tool for Ironic Inspector
 
@@ -65,6 +65,9 @@ rm -f {test-,}requirements.txt
 %{python2_sitelib}/python_ironic_inspector_client*egg-info
 
 %changelog
+* Tue Apr 30 2019 RDO <dev@lists.rdoproject.org> 2.1.1-1
+- Update to 2.1.1
+
 * Wed Sep 13 2017 rdo-trunk <javier.pena@redhat.com> 2.1.0-1
 - Update to 2.1.0
 
