@@ -23,8 +23,8 @@ scheduling from a bare metal node, given it’s power management credentials \
 
 
 Name:           python-ironic-inspector-client
-Version:        XXX
-Release:        XXX
+Version:        3.7.0
+Release:        1%{?dist}
 Summary:        Python client and CLI tool for Ironic Inspector
 
 License:        ASL 2.0
@@ -101,3 +101,6 @@ rm -f {test-,}requirements.txt
 %{pyver_sitelib}/python_ironic_inspector_client*egg-info
 
 %changelog
+* Mon Sep 23 2019 RDO <dev@lists.rdoproject.org> 3.7.0-1
+- Update to 3.7.0
+
