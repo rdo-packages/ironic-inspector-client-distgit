@@ -42,27 +42,30 @@ BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-pbr
 BuildRequires:  python%{pyver}-setuptools
 # This all is required to run unit tests in check phase
+BuildRequires:  python%{pyver}-cliff
+BuildRequires:  python%{pyver}-keystoneauth1
 BuildRequires:  python%{pyver}-mock
-BuildRequires:  python%{pyver}-osc-lib
 BuildRequires:  python%{pyver}-osc-lib-tests
 BuildRequires:  python%{pyver}-oslo-i18n
-BuildRequires:  python%{pyver}-oslo-utils
 BuildRequires:  python%{pyver}-requests
-BuildRequires:  python%{pyver}-six
 
 Requires:  python%{pyver}-pbr >= 2.0.0
+Requires:  python%{pyver}-cliff >= 2.8.0
 Requires:  python%{pyver}-keystoneauth1 >= 3.4.0
-Requires:  python%{pyver}-osc-lib >= 1.10.0
-Requires:  python%{pyver}-oslo-i18n >= 3.15.3
-Requires:  python%{pyver}-oslo-utils >= 3.33.0
 Requires:  python%{pyver}-requests
-Requires:  python%{pyver}-six
 
 # Handle python2 exception
 %if %{pyver} == 2
 Requires:       PyYAML >= 3.10
 %else
 Requires:       python%{pyver}-PyYAML >= 3.10
+%endif
+
+# oslo.i18n is not required and there are no translations in practice
+%if 0%{?fedora} || 0%{?rhel} > 7
+Suggests:  python%{pyver}-oslo-i18n >= 3.15.3
+%else
+Requires:  python%{pyver}-oslo-i18n >= 3.15.3
 %endif
 
 Obsoletes: python-ironic-discoverd < 1.1.0-3
