@@ -52,26 +52,16 @@ BuildRequires:  python%{pyver}-six
 
 Requires:  python%{pyver}-pbr >= 2.0.0
 Requires:  python%{pyver}-keystoneauth1 >= 3.4.0
-Requires:  python%{pyver}-osc-lib >= 1.10.0
-Requires:  python%{pyver}-oslo-i18n >= 3.15.3
-Requires:  python%{pyver}-oslo-utils >= 3.33.0
 Requires:  python%{pyver}-requests
-Requires:  python%{pyver}-six
+Requires:  python%{pyver}-cliff >= 2.8.0
 
-# Handle python2 exception
-%if %{pyver} == 2
-Requires:       PyYAML >= 3.10
-%else
 Requires:       python%{pyver}-PyYAML >= 3.10
-%endif
 
 Obsoletes: python-ironic-discoverd < 1.1.0-3
 Provides: python-ironic-discoverd = %{upstream_version}
 
 %{?python_provide:%python_provide python%{pyver}-%{sname}}
-%if %{pyver} == 3
 Obsoletes: python2-%{sname} < %{version}-%{release}
-%endif
 
 %description -n python%{pyver}-%{sname}
 %{common_desc}
