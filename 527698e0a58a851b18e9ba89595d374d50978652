@@ -63,6 +63,24 @@
       "revId": "527698e0a58a851b18e9ba89595d374d50978652",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8549ab60_55b7530c",
+        "filename": "python-ironic-inspector-client.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2020-04-17T14:00:12Z",
+      "side": 1,
+      "message": "Oh, sorry for not having reviewed your patch.\nTo ease the process, i\u0027ve included your proposed changes in this review, and assigned you as Co-Author, is it ok for you ?",
+      "parentUuid": "ecbbdedc_1b864fb5",
+      "revId": "527698e0a58a851b18e9ba89595d374d50978652",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
