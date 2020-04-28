@@ -1,0 +1,10 @@
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Code-Review+1: Daniel Pawlik <pawlik.dan@gmail.com>
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Tue, 28 Apr 2020 06:15:19 +0000
+Reviewed-on: https://review.rdoproject.org/r/26439
+Project: openstack/ironic-inspector-client-distgit
+Branch: refs/heads/rpm-master
