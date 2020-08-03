@@ -36,12 +36,12 @@ BuildRequires:  python3-osc-lib-tests
 BuildRequires:  python3-oslo-i18n
 BuildRequires:  python3-requests
 
-Requires:  python3-pbr >= 2.0.0
 Requires:  python3-cliff >= 2.8.0
 Requires:  python3-keystoneauth1 >= 3.4.0
-Requires:  python3-requests
+Requires:  python3-pbr >= 2.0.0
+Requires:  python3-PyYAML >= 3.12
+Requires:  python3-requests >= 2.14.2
 
-Requires:  python3-PyYAML >= 3.10
 Suggests:  python3-oslo-i18n >= 3.15.3
 
 Obsoletes: python-ironic-discoverd < 1.1.0-3
