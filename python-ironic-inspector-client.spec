@@ -52,7 +52,7 @@ BuildRequires:  python3-requests
 Requires:  python3-cliff >= 2.8.0
 Requires:  python3-keystoneauth1 >= 3.4.0
 Requires:  python3-pbr >= 2.0.0
-Requires:  python3-PyYAML >= 3.12
+Requires:  python3-PyYAML >= 3.13
 Requires:  python3-requests >= 2.14.2
 
 Suggests:  python3-oslo-i18n >= 3.15.3
