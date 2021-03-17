@@ -55,7 +55,9 @@ Requires:  python3-pbr >= 2.0.0
 Requires:  python3-PyYAML >= 3.13
 Requires:  python3-requests >= 2.14.2
 
+%if 0%{?fedora} || 0%{?rhel} > 7
 Suggests:  python3-oslo-i18n >= 3.15.3
+%endif
 
 Obsoletes: python-ironic-discoverd < 1.1.0-3
 Provides:  python-ironic-discoverd = %{upstream_version}
