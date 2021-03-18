@@ -1,0 +1,9 @@
+Code-Review+2: Dmitry Tantsur <dtantsur@protonmail.com>
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Workflow+1: Alfredo Moralejo <amoralej@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 18 Mar 2021 09:00:24 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/ironic-inspector-client-distgit/+/32509
+Project: openstack/ironic-inspector-client-distgit
+Branch: refs/heads/rpm-master
