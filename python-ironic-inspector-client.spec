@@ -48,6 +48,7 @@ BuildRequires:  python3-mock
 BuildRequires:  python3-osc-lib-tests
 BuildRequires:  python3-oslo-i18n
 BuildRequires:  python3-requests
+BuildRequires:  python3-stestr
 
 Requires:  python3-cliff >= 2.8.0
 Requires:  python3-keystoneauth1 >= 3.4.0
@@ -89,7 +90,7 @@ rm -f {test-,}requirements.txt
 
 
 %check
-%{__python3} -m unittest discover ironic_inspector_client.test
+stestr run
 
 %files -n python3-%{sname}
 %doc README.rst LICENSE
