@@ -98,3 +98,4 @@ stestr run
 %{python3_sitelib}/python_ironic_inspector_client*egg-info
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/python-ironic-inspector-client/commit/82649e1bd7c3dcdce5cb930830efc9918070a795
