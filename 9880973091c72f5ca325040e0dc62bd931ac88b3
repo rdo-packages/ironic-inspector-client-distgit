@@ -24,6 +24,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d4cdaeb_3469c816",
+        "filename": "python-ironic-inspector-client.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-07-21T12:46:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "978b6ac3_183efe7d",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 12
+      },
+      "revId": "9880973091c72f5ca325040e0dc62bd931ac88b3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "938e58f6_d4a092bf",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-07-21T11:57:54Z",
       "side": 1,
       "message": "we can remove this line",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 10
+      },
+      "revId": "9880973091c72f5ca325040e0dc62bd931ac88b3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d09d386c_9ab4d736",
+        "filename": "python-ironic-inspector-client.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-07-21T12:46:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "938e58f6_d4a092bf",
       "range": {
         "startLine": 55,
         "startChar": 0,
