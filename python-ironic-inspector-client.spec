@@ -1,6 +1,8 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+# we are excluding some BRs from automatic generator
+%global excluded_brs doc8 bandit pre-commit hacking flake8-import-order sphinx openstackdocstheme
 
 %global pypi_name python-ironic-inspector-client
 
@@ -18,7 +20,7 @@ Version:        XXX
 Release:        XXX
 Summary:        Python client and CLI tool for Ironic Inspector
 
-License:        ASL 2.0
+License:        Apache-2.0
 URL:            https://launchpad.net/python-ironic-inspector-client
 Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
 # Required for tarball sources verification
@@ -41,30 +43,13 @@ BuildRequires:  openstack-macros
 Summary:        Python client and CLI tool for Ironic Inspector
 
 BuildRequires:  python3-devel
-BuildRequires:  python3-pbr
-BuildRequires:  python3-setuptools
-# This all is required to run unit tests in check phase
-BuildRequires:  python3-mock
+BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3-osc-lib-tests
-BuildRequires:  python3-oslo-i18n
-BuildRequires:  python3-requests
-BuildRequires:  python3-stestr
 
-Requires:  python3-cliff >= 2.8.0
-Requires:  python3-keystoneauth1 >= 3.4.0
-Requires:  python3-pbr >= 2.0.0
-Requires:  python3-PyYAML >= 3.13
-Requires:  python3-requests >= 2.14.2
-
-%if 0%{?fedora} || 0%{?rhel} > 7
 Suggests:  python3-oslo-i18n >= 3.15.3
-%endif
 
 Obsoletes: python-ironic-discoverd < 1.1.0-3
 Provides:  python-ironic-discoverd = %{upstream_version}
-
-%{?python_provide:%python_provide python3-%{sname}}
-Obsoletes: python2-%{sname} < %{version}-%{release}
 
 %description -n python3-%{sname}
 %{common_desc}
@@ -77,24 +62,37 @@ This package contains Python client and command line tool for Ironic Inspector.
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
 %setup -q -n %{pypi_name}-%{upstream_version}
-# Remove bundled egg-info
-rm -rf %{pypi_name}.egg-info
-# Let RPM handle the dependencies
-rm -f {test-,}requirements.txt
+
+sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
+sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
+sed -i /^minversion.*/d tox.ini
+sed -i /^requires.*virtualenv.*/d tox.ini
+
+# Exclude some bad-known BRs
+for pkg in %{excluded_brs}; do
+  for reqfile in doc/requirements.txt test-requirements.txt; do
+    if [ -f $reqfile ]; then
+      sed -i /^${pkg}.*/d $reqfile
+    fi
+  done
+done
+
+%generate_buildrequires
+%pyproject_buildrequires -t -e %{default_toxenv}
 
 %build
-%{py3_build}
+%pyproject_wheel
 
 %install
-%{py3_install}
+%pyproject_install
 
 
 %check
-stestr run
+%tox -e %{default_toxenv}
 
 %files -n python3-%{sname}
 %doc README.rst LICENSE
 %{python3_sitelib}/ironic_inspector_client*
-%{python3_sitelib}/python_ironic_inspector_client*egg-info
+%{python3_sitelib}/python_ironic_inspector_client*dist-info
 
 %changelog
