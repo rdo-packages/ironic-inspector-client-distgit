@@ -1,0 +1,31 @@
+From e8128a1817ada8bb01d714cf71f1bf790ae5aba9 Mon Sep 17 00:00:00 2001
+From: Riccardo Pittau <elfosardo@gmail.com>
+Date: Thu, 6 Mar 2025 12:33:29 +0100
+Subject: [PATCH] Fix bare metal info order in unit tests
+
+Info on bare metal components have changed order
+
+Change-Id: Iada5fbaab92a8971399ba056bb2734ed832405c3
+---
+ ironic_inspector_client/tests/unit/test_shell.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/ironic_inspector_client/tests/unit/test_shell.py b/ironic_inspector_client/tests/unit/test_shell.py
+index a75d575..76baa83 100644
+--- a/ironic_inspector_client/tests/unit/test_shell.py
++++ b/ironic_inspector_client/tests/unit/test_shell.py
+@@ -335,9 +335,9 @@ class TestRules(BaseTest):
+         parsed_args = self.check_parser(cmd, arglist, verifylist)
+         cols, values = cmd.take_action(parsed_args)
+ 
+-        self.assertEqual(('actions', 'conditions', 'description', 'uuid'),
++        self.assertEqual(('uuid', 'description', 'conditions', 'actions'),
+                          cols)
+-        self.assertEqual(([{}], [{}], 'd', 'uuid1'), values)
++        self.assertEqual(('uuid1', 'd', [{}], [{}]), values)
+         self.rules_api.get.assert_called_once_with('uuid1')
+ 
+     def test_delete(self):
+-- 
+2.47.1
+
