@@ -18,7 +18,7 @@ scheduling from a bare metal node, given it’s power management credentials \
 
 
 Name:           python-ironic-inspector-client
-Version:        5.3.0
+Version:        5.3.1
 Release:        1%{?dist}
 Summary:        Python client and CLI tool for Ironic Inspector
 
@@ -104,6 +104,9 @@ done
 %{python3_sitelib}/python_ironic_inspector_client*dist-info
 
 %changelog
+* Tue May 13 2025 RDO <dev@lists.rdoproject.org> 5.3.1-1
+- Update to 5.3.1
+
 * Mon Mar 17 2025 RDO <dev@lists.rdoproject.org> 5.3.0-1
 - Update to 5.3.0
 
