@@ -104,3 +104,4 @@ done
 %{python3_sitelib}/python_ironic_inspector_client*dist-info
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/python-ironic-inspector-client/commit/10ed6342db245766e143e91e382ed2d8d1ff0f7a
